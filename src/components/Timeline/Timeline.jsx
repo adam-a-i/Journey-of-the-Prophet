@@ -21,23 +21,14 @@ const Timeline = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const handleEventClick = (event) => {
-    setSelectedEvent(event);
-  };
-
   return (
     <motion.div
       className="timeline-container"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
     >
-      <motion.div
-        className="timeline-controls"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
+      <div className="timeline-controls">
         <TimelineSearch
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
@@ -47,79 +38,49 @@ const Timeline = () => {
           setActiveCategory={setActiveCategory}
           categories={timelineCategories}
         />
-      </motion.div>
+      </div>
 
       <div className="timeline-wrapper" ref={timelineRef}>
         <div className="timeline-line" />
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false}>
           {filteredEvents.map((event, index) => (
             <TimelineEvent
               key={event.id}
               event={event}
               index={index}
               isActive={selectedEvent?.id === event.id}
-              onClick={() => handleEventClick(event)}
+              onClick={() => setSelectedEvent(event)}
             />
           ))}
         </AnimatePresence>
       </div>
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {selectedEvent && (
           <motion.div
             className="timeline-detail-view"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
           >
-            <motion.h2
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              {selectedEvent.title}
-            </motion.h2>
-            <motion.div
-              className="event-content"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
+            <h2>{selectedEvent.title}</h2>
+            <div className="event-content">
               <p>{selectedEvent.details.content}</p>
               <div className="event-quotes">
                 {selectedEvent.details.quotes.map((quote, index) => (
-                  <motion.blockquote
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                  >
-                    {quote}
-                  </motion.blockquote>
+                  <blockquote key={index}>{quote}</blockquote>
                 ))}
               </div>
-              <motion.div
-                className="event-references"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-              >
+              <div className="event-references">
                 <h4>References:</h4>
                 <ul>
                   {selectedEvent.details.references.map((ref, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.6 + index * 0.1 }}
-                    >
-                      {ref}
-                    </motion.li>
+                    <li key={index}>{ref}</li>
                   ))}
                 </ul>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
