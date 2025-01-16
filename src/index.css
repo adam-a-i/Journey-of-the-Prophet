@@ -4,11 +4,19 @@
   --sand-medium: #d2b48c;
   --sand-dark: #8b4513;
   --gold-accent: #d4af37;
-  --desert-gradient-1: #f7e9c3; /* Light sand */
-  --desert-gradient-2: #e6c588; /* Medium sand */
-  --desert-gradient-3: #d4a76a; /* Dark sand */
-  --dune-shadow: rgba(110, 66, 20, 0.2);
-  --dune-highlight: rgba(255, 248, 240, 0.1);
+  --desert-gradient-1: #e8d5b5; /* Lighter sand */
+  --desert-gradient-2: #d2b48c; /* Medium sand */
+  --desert-gradient-3: #b38b6d; /* Darker sand */
+}
+
+/* Force cursor to be visible everywhere */
+html, 
+body, 
+#root, 
+.app-container,
+*::before,
+*::after {
+  cursor: default !important;
 }
 
 body {
@@ -24,85 +32,20 @@ body {
   );
   position: relative;
   overflow-x: hidden;
-  /* Add GPU acceleration */
-  transform: translateZ(0);
-  will-change: transform;
 }
 
-/* Optimize large dunes animation */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,400 Q150,380 300,400 T600,380 T1000,400 L1000,600 L0,600 Z' fill='rgba(110, 66, 20, 0.15)'/%3E%3C/svg%3E");
-  background-size: 200% 100%;
-  background-position: center bottom;
-  opacity: 0.8;
-  z-index: -1;
-  transform: translateZ(0);
-  will-change: transform;
-  animation: dunes 60s linear infinite;
-}
-
-/* Simplify medium dunes animation */
-body::after {
-  content: "";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,200 Q200,150 400,200 T800,180 T1000,200 L1000,400 L0,400 Z' fill='rgba(110, 66, 20, 0.08)'/%3E%3C/svg%3E");
-  background-size: 150% 100%;
-  background-position: center bottom;
-  opacity: 0.6;
-  z-index: -1;
-  transform: translateZ(0);
-  will-change: transform;
-  animation: mediumDunes 45s linear infinite;
-}
-
-/* Optimize sand texture */
-#root::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.08'/%3E%3C/svg%3E");
-  opacity: 0.1;
-  z-index: -1;
-  pointer-events: none;
-  mix-blend-mode: overlay;
-}
-
-/* Simplified animations */
-@keyframes dunes {
-  to {
-    background-position: -200% bottom;
-  }
-}
-
-@keyframes mediumDunes {
-  to {
-    background-position: -150% bottom;
-  }
-}
-
-/* Optimize heat haze effect */
-@keyframes heatHaze {
-  50% {
-    filter: blur(0.3px);
-    transform: scale(1.0005);
-  }
+/* Override cursor for interactive elements */
+button,
+input,
+a,
+[role="button"],
+.timeline-event,
+.filter-btn,
+.search-input,
+.event-icon {
+  cursor: pointer !important;
 }
 
 .app-container {
-  animation: heatHaze 12s ease-in-out infinite;
   transform: translateZ(0);
-  will-change: transform;
 }

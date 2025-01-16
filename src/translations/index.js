@@ -1,0 +1,32 @@
+export const translations = {
+  en: {
+    title: "The Prophet's Seerah",
+    subtitle: "Journey Through the Life of Prophet Muhammad ﷺ",
+    summary: "Summary",
+    quotes: "Notable Quotes",
+    resources: "Learning Resources",
+    pptButton: "PowerPoint Presentation",
+    pptSubtext: "Download and learn offline",
+    quizButton: "Take the Quiz",
+    quizSubtext: "Test your knowledge",
+    relatedVideos: "Related Videos",
+    references: "References",
+    searchPlaceholder: "Search events...",
+    allEvents: "All Events",
+  },
+  ar: {
+    title: "السيرة النبوية",
+    subtitle: "رحلة في حياة النبي محمد ﷺ",
+    summary: "ملخص",
+    quotes: "أقوال مأثورة",
+    resources: "مصادر التعلم",
+    pptButton: "عرض تقديمي",
+    pptSubtext: "تحميل والتعلم دون اتصال",
+    quizButton: "ابدأ الاختبار",
+    quizSubtext: "اختبر معرفتك",
+    relatedVideos: "فيديوهات ذات صلة",
+    references: "المراجع",
+    searchPlaceholder: "البحث في الأحداث...",
+    allEvents: "جميع الأحداث",
+  }
+}; 

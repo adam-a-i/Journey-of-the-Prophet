@@ -1,11 +1,21 @@
 import { motion } from "framer-motion";
 
 const TimelineEvent = ({ event, index, isActive, onClick }) => {
+  // Add console log to check if click handler is being called
+  const handleClick = () => {
+    console.log('TimelineEvent clicked:', event.id);
+    onClick(event);
+  };
+
+  // Handle both string and object title/description
+  const title = typeof event.title === 'object' ? event.title.en : event.title;
+  const description = typeof event.description === 'object' ? event.description.en : event.description;
+
   return (
     <motion.div
       className={`timeline-event ${isActive ? "active" : ""}`}
       data-index={index}
-      onClick={onClick}
+      onClick={handleClick}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -19,19 +29,11 @@ const TimelineEvent = ({ event, index, isActive, onClick }) => {
       }}
       whileTap={{ scale: 0.99 }}
     >
-      <motion.div
-        className="event-icon"
-        whileHover={{
-          rotate: 180,
-          transition: { duration: 0.3 },
-        }}
-      >
-        {event.icon}
-      </motion.div>
+      <div className="event-icon">{event.icon}</div>
       <div className="event-content">
         <span className="event-year">{event.year}</span>
-        <h3 className="event-title">{event.title}</h3>
-        <p className="event-description">{event.description}</p>
+        <h3 className="event-title">{title}</h3>
+        <p className="event-description">{description}</p>
       </div>
     </motion.div>
   );

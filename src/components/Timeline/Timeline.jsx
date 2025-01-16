@@ -6,18 +6,23 @@ import TimelineFilter from "./TimelineFilter";
 import TimelineSearch from "./TimelineSearch";
 import "./Timeline.css";
 
-const Timeline = () => {
+const Timeline = ({ onEventSelect, selectedEvent }) => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedEvent, setSelectedEvent] = useState(null);
   const timelineRef = useRef(null);
 
   const filteredEvents = timelineEvents.filter((event) => {
     const matchesCategory =
       activeCategory === "all" || event.category === activeCategory;
+    
+    // Handle both string and object title/description
+    const title = typeof event.title === 'object' ? event.title.en : event.title;
+    const description = typeof event.description === 'object' ? event.description.en : event.description;
+    
     const matchesSearch =
-      event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      event.description.toLowerCase().includes(searchQuery.toLowerCase());
+      title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      description.toLowerCase().includes(searchQuery.toLowerCase());
+    
     return matchesCategory && matchesSearch;
   });
 
@@ -49,41 +54,11 @@ const Timeline = () => {
               event={event}
               index={index}
               isActive={selectedEvent?.id === event.id}
-              onClick={() => setSelectedEvent(event)}
+              onClick={() => onEventSelect(event)}
             />
           ))}
         </AnimatePresence>
       </div>
-
-      <AnimatePresence>
-        {selectedEvent && (
-          <motion.div
-            className="timeline-detail-view"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <h2>{selectedEvent.title}</h2>
-            <div className="event-content">
-              <p>{selectedEvent.details.content}</p>
-              <div className="event-quotes">
-                {selectedEvent.details.quotes.map((quote, index) => (
-                  <blockquote key={index}>{quote}</blockquote>
-                ))}
-              </div>
-              <div className="event-references">
-                <h4>References:</h4>
-                <ul>
-                  {selectedEvent.details.references.map((ref, index) => (
-                    <li key={index}>{ref}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.div>
   );
 };

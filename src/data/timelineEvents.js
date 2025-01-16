@@ -47,16 +47,34 @@ export const timelineEvents = [
   },
   {
     id: "early-life-1",
-    title: "Birth of Prophet Muhammad ﷺ",
+    title: {
+      en: "Birth of Prophet Muhammad ﷺ",
+      ar: "ولادة النبي محمد ﷺ"
+    },
+    description: {
+      en: "The blessed birth in Mecca.",
+      ar: "الولادة المباركة في مكة."
+    },
     category: timelineCategories.EARLY_LIFE,
     year: "570 CE",
-    description: "The blessed birth in Mecca.",
     icon: "👶",
     details: {
+      summary: "Short summary here...",
+      fullSummary: "Full detailed summary here...",
+      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+      powerPointUrl: "/path/to/presentation.pptx",
       quotes: ["Born in the Year of the Elephant"],
       content:
         "Prophet Muhammad ﷺ was born in Mecca in the Year of the Elephant, named after a significant historical event.",
       references: ["Authentic biographical accounts", "Historical records"],
+      quiz: [
+        {
+          question: "In which year was Prophet Muhammad ﷺ born?",
+          options: ["569 CE", "570 CE", "571 CE", "572 CE"],
+          correct: 1
+        }
+        // Add more quiz questions...
+      ]
     },
   },
   {
