@@ -1,0 +1,120 @@
+:root {
+  /* Desert theme colors - refined sand tones */
+  --sand-light: #f5e6d3;
+  --sand-medium: #d2b48c;
+  --sand-dark: #8b4513;
+  --gold-accent: #d4af37;
+  --desert-gradient-1: #f7e9c3; /* Light sand */
+  --desert-gradient-2: #e6c588; /* Medium sand */
+  --desert-gradient-3: #d4a76a; /* Dark sand */
+  --dune-shadow: rgba(110, 66, 20, 0.2);
+  --dune-highlight: rgba(255, 248, 240, 0.1);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--desert-gradient-1) 0%,
+    var(--desert-gradient-2) 50%,
+    var(--desert-gradient-3) 100%
+  );
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Large dunes in the background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='duneGradient1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='rgba(255, 248, 240, 0.1)'/%3E%3Cstop offset='100%25' stop-color='rgba(110, 66, 20, 0.2)'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0,400 Q150,380 300,400 T600,380 T1000,400 L1000,600 L0,600 Z' fill='url(%23duneGradient1)'/%3E%3Cpath d='M0,450 Q200,420 400,450 T800,430 T1000,450 L1000,600 L0,600 Z' fill='rgba(110, 66, 20, 0.15)'/%3E%3Cpath d='M0,500 Q300,480 500,500 T1000,480 L1000,600 L0,600 Z' fill='rgba(110, 66, 20, 0.1)'/%3E%3C/svg%3E");
+  background-size: 200% 100%;
+  background-position: center bottom;
+  opacity: 1;
+  z-index: -1;
+  animation: dunes 30s ease-in-out infinite alternate;
+}
+
+/* Medium dunes in the middle ground */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='duneGradient2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='rgba(255, 248, 240, 0.08)'/%3E%3Cstop offset='100%25' stop-color='rgba(110, 66, 20, 0.15)'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0,200 Q200,150 400,200 T800,180 T1000,200 L1000,400 L0,400 Z' fill='url(%23duneGradient2)'/%3E%3Cpath d='M0,250 Q250,200 500,250 T1000,230 L1000,400 L0,400 Z' fill='rgba(110, 66, 20, 0.08)'/%3E%3C/svg%3E");
+  background-size: 150% 100%;
+  background-position: center bottom;
+  opacity: 0.8;
+  z-index: -1;
+  animation: mediumDunes 20s ease-in-out infinite alternate-reverse;
+}
+
+/* Sand texture overlay */
+#root::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.08'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+@keyframes dunes {
+  0% {
+    background-position: 0% bottom;
+  }
+  100% {
+    background-position: -100% bottom;
+  }
+}
+
+@keyframes mediumDunes {
+  0% {
+    background-position: 50% bottom;
+  }
+  100% {
+    background-position: -50% bottom;
+  }
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Add a subtle heat haze effect */
+@keyframes heatHaze {
+  0% {
+    filter: blur(0px);
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    filter: blur(0.5px);
+    transform: scale(1.001) translateY(-2px);
+  }
+  100% {
+    filter: blur(0px);
+    transform: scale(1) translateY(0);
+  }
+}
+
+.app-container {
+  animation: heatHaze 8s ease-in-out infinite;
+}

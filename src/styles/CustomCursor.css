@@ -1,0 +1,117 @@
+* {
+  cursor: none !important;
+}
+
+.cursor-core {
+  width: 8px;
+  height: 8px;
+  background-color: var(--sand-dark);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10001;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+  opacity: 0.9;
+}
+
+.cursor-ring {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--sand-dark);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease;
+  opacity: 0.6;
+}
+
+.cursor-trail {
+  width: 48px;
+  height: 48px;
+  background: radial-gradient(
+    circle,
+    var(--sand-medium) 0%,
+    var(--sand-light) 40%,
+    transparent 70%
+  );
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+  opacity: 0.3;
+}
+
+/* Interactive states */
+.cursor-core.pointer {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.cursor-ring.pointer {
+  width: 36px;
+  height: 36px;
+  border-color: var(--gold-accent);
+  opacity: 0.8;
+}
+
+.cursor-trail.pointer {
+  width: 64px;
+  height: 64px;
+  opacity: 0.4;
+}
+
+/* Movement animations */
+.cursor-core.moving {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.cursor-ring.moving {
+  animation: rotate 8s linear infinite;
+}
+
+.cursor-trail.moving {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Ensure smooth transitions */
+* {
+  transition: cursor 0.3s ease;
+}
