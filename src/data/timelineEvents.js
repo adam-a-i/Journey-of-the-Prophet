@@ -250,9 +250,11 @@ export const timelineEvents = [
       ],
       content: "The youth of Muhammad ﷺ was marked by significant experiences that prepared him for his future role:\n\n1. Trade Journeys: Traveled with his uncle Abu Talib to Syria, gaining commercial experience\n\n2. Character Development: Became known as 'Al-Amin' (The Trustworthy) for his exceptional honesty\n\n3. Social Leadership: Participated in the Hilf al-Fudul alliance at age 20\n\n4. Marriage to Khadijah: At 25, married Khadijah bint Khuwaylid, a successful businesswoman\n\n5. Arbitration: Resolved the Black Stone dispute at age 35\n\nKey lessons from this period:\n- The importance of good character in earning social trust\n- The value of practical experience in trade and leadership\n- The significance of standing for justice and supporting the oppressed",
       references: [
-        "Ibn Sayyid Al-Nas, Uyun Al-Athar",
-        "Al-Baladhuri, Ansab al-Ashraf",
-        "Ibn Kathir, Al-Sirah Al-Nabawiyyah"
+        "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin",
+        "Al-Suyuti, Al-Khasa's Al-Kubra",
+        "Ibn Saiyyd Al-Nas, Uyun Al-Athar",
+        "Ibn Haddida, Al-Misbah Al-Mudi'",
+        "Al-Kala'i, al-Iktifa'a"
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
@@ -410,10 +412,13 @@ export const timelineEvents = [
       ],
       content: "After the Treaty of Hudaybiyyah, the Prophet ﷺ initiated diplomatic correspondence with world leaders:\n\n1. Diplomatic Approach:\n- Respected existing authority structures\n- Used formal titles and proper etiquette\n- Had special seal made for official correspondence\n- Selected skilled envoys for each mission\n\n2. Key Recipients:\n- Heraclius (Byzantine Emperor)\n- Al-Muqawqis (Ruler of Egypt)\n- Negus (King of Abyssinia)\n- Khosroes (Persian Emperor)\n- Various Arab rulers\n\n3. Message Content:\n- Began with greetings of peace\n- Invited to Islam with wisdom and respect\n- Emphasized shared values and beliefs\n- Maintained diplomatic courtesy\n\nKey Lessons:\n\n1. Respect for Authority:\n- Recognized existing leadership\n- Maintained diplomatic protocol\n- Honored local customs and titles\n\n2. Peaceful Approach:\n- Emphasized dialogue over conflict\n- Sought peaceful coexistence\n- Respected religious differences\n\n3. Universal Message:\n- Islam's compatibility with other faiths\n- Emphasis on shared moral values\n- Recognition of common human heritage\n\n4. Ethical Foundation:\n- Importance of truthfulness\n- Value of modesty and respect\n- Priority of moral character",
       references: [
-        "Ibn Tulun, I'lam Al-Sa'ilin",
-        "Al-Suyuti, Al-Khasa's Al-Kubra",
-        "Ibn Saiyyd Al-Nas, Uyun Al-Athar",
-        "Sahih Al-Bukhari"
+        "Edward Said, Orientalism; Western Conceptions of the Orient",
+        "Albert Hourani, Islam in European Thought",
+        "Thomas Carlyle, Muhammad: The Hero as Prophet",
+        "Saeed bin Ali Al-Maghnawi, Al-Sira Al-Nabawiya Fi Al-Kutub Al-Almaniya",
+        "Jamal ibn Muhammad ibn Muhammad, Nukbah Kabirah min Aqwak Ulama' Al-Gharb",
+        "Hussein Nasr, Al-Maghazi Al-Ula wa Mu'allifuha",
+        "Hassan Bazaynia, Kitabat al-Sira al-Nabawiyyah"
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
@@ -436,7 +441,8 @@ export const timelineEvents = [
         "Al-Suhayli, Al-Rawd Al-Unuf",
         "Ibn Abd al-Barr, Al-Durar",
         "Al-Maqrizi, Imta' al-Asma'",
-        "Al-Zubairi, Nasab Quraysh"
+        "Al-Zubairi, Nasab Quraysh",
+        "Ibn Hisham, Al-Sirah Al-Nabawiyyah"
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
@@ -457,9 +463,10 @@ export const timelineEvents = [
       content: "The Battle of the Trench (Al-Ahzab) demonstrated strategic defense:\n\n1. Causes:\n- Jewish leaders incited tribes against Muslims\n- Confederate forces gathered to attack Medina\n- Breach of treaty by Banu Qurayza\n\n2. Innovative Defense:\n- Salman al-Farsi's suggestion to dig trench\n- Prophet ﷺ participated in digging\n- Unprecedented strategy in Arabian warfare\n\n3. The Siege:\n- Muslims faced enemies from multiple directions\n- Lasted approximately 20 days\n- Limited to arrow exchanges and small skirmishes\n\n4. Resolution:\n- Nu'aym ibn Mas'ud's strategic role\n- Divine intervention through weather\n- Confederates retreated without achieving objectives\n\nKey Lessons:\n- Importance of innovation in defense\n- Value of strategic thinking\n- Power of unity in face of adversity\n- Role of divine support in times of hardship",
       references: [
         "Al-Maqrizi, Imta' Al-Asma'",
-        "Al-Baihaqi, Dala'il al-Nubuwwa",
+        "Al-Bayhaqi, Dala'il al-Nubuwwa",
         "Al-Diyarbakri, Tarikh Al-Khamis",
-        "Ibn Hisham, Al-Sirah Al-Nabawiyyah"
+        "Ibn Hisham, Al-Sirah Al-Nabawiyyah",
+        "Al-Suhayli, Al-Rawd Al-Unuf"
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
@@ -475,7 +482,7 @@ export const timelineEvents = [
       quotes: ["I leave behind me two things: the Quran and my Sunnah"],
       content:
         "The Farewell Pilgrimage contained the Prophet's final major public address.",
-      references: ["Hadith collections", "Historical accounts"],
+      references: ["Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin", "Al-Suyuti, Al-Khasa's Al-Kubra", "Ibn Saiyyd Al-Nas, Uyun Al-Athar", "Ibn Haddida, Al-Misbah Al-Mudi'", "Al-Kala'i, al-Iktifa'a"],
     },
   },
   {
@@ -494,9 +501,10 @@ export const timelineEvents = [
       content: "The conquest of Mecca marked a turning point in Islamic history:\n\n1. Causes:\n- Quraysh's violation of Hudaybiyyah Treaty\n- Support of Banu Bakr against Khuza'a\n- Failed diplomatic attempts to renew peace\n\n2. The Conquest:\n- Muslims marched with 10,000 followers\n- Abu Sufyan's conversion and role\n- Peaceful entry from multiple directions\n- Minimal bloodshed and fighting\n\n3. Prophet's ﷺ Actions:\n- Entered Mecca with humility\n- Performed Tawaf around Ka'bah\n- Delivered unifying sermon\n- Showed mercy to former opponents\n\n4. Year of Delegations:\n- Various tribes sent representatives\n- Notable delegations included:\n  • Tamim\n  • Abd al-Qais\n  • Banu Hanifa\n  • Najran\n  • Yemen\n\n5. Treatment of Delegations:\n- Warm welcome and hospitality\n- Patient teaching of Islam\n- Respect for tribal customs\n- Appointment of teachers and governors\n\nKey Lessons:\n- Victory through moral excellence\n- Importance of forgiveness\n- No compulsion in religion\n- Equal rights for men and women\n- Value of diplomatic relations",
       references: [
         "Al-Suhayli, Al-Rawd Al-Unuf",
-        "Ibn Abd al-Barr, Al-Durar",
-        "Al-Qadi Iyad, Al-Shifa",
-        "Ibn Saad, Al-Tabaqat Al-Kabir"
+        "Ibn Abd al-Barr, Al-Durar fi Ikhtisar Al-Maghazi wa Al-Siyar",
+        "Ibn Saad, Al-Tabaqat Al-Kubra",
+        "Ibn Hisham, Al-Sirah Al-Nabawiyyah",
+        "Al-Maqrizi, Imta' al-Asma'"
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
@@ -516,10 +524,11 @@ export const timelineEvents = [
       ],
       content: "The final months of the Prophet's ﷺ life marked significant events:\n\n1. The Farewell Pilgrimage:\n- Performed in 10 AH\n- Over 100,000 Muslims participated\n- Detailed demonstration of Hajj rituals\n- Delivered comprehensive farewell sermon\n\n2. The Farewell Sermon:\n- Emphasized human rights and dignity\n- Prohibited bloodshed and injustice\n- Established equality among people\n- Stressed women's rights\n- Abolished pre-Islamic customs\n- Left Quran and Sunnah as guidance\n\n3. Final Days:\n- Illness began after visiting Baqi cemetery\n- Stayed in Aisha's chamber\n- Abu Bakr led prayers\n- Made final appearance in mosque\n\n4. The Prophet's ﷺ Passing:\n- Monday, 12th Rabi al-Awwal, 11 AH\n- Age 63\n- Buried in Aisha's chamber\n- Community deeply affected\n\nKey Lessons:\n- Importance of clear succession\n- Universal message of Islam\n- Emphasis on human dignity\n- Protection of vulnerable groups\n- Unity of Muslim community\n- Preservation of human rights",
       references: [
-        "Ibn Hisham, Al-Sirah Al-Nabawiyyah",
-        "Al-Nuwayri, Nihayat al-Arab",
-        "Sahih Al-Bukhari",
-        "Ibn Saad, Al-Tabaqat Al-Kabir"
+        "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin",
+        "Al-Suyuti, Al-Khasa's Al-Kubra",
+        "Ibn Saiyyd Al-Nas, Uyun Al-Athar",
+        "Ibn Haddida, Al-Misbah Al-Mudi'",
+        "Al-Kala'i, al-Iktifa'a"
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
@@ -539,10 +548,13 @@ export const timelineEvents = [
       ],
       content: "Western scholarly engagement with Islamic studies evolved over centuries:\n\n1. Orientalism Definition and Beginnings:\n- Term emerged in 10th century CE\n- Officially established in 1312 CE\n- Focus on studying Eastern civilizations\n- University programs established at Paris, Oxford, Bologna\n\n2. Orientalism Conferences:\n- Late 19th century organization\n- Government support for research\n- International scholarly meetings\n- Publication of research collections\n- Development of research methodologies\n\n3. Prophet's ﷺ Biography in Orientalist Works:\n- Karl Heinrich Becker's defense of Prophet ﷺ\n- Washington Irving's 1849 biography\n- William Muir's 'Life of Muhammad'\n- Thomas Carlyle's 'Muhammad: The Hero as Prophet'\n- Leone Caetani's 'Huliyat al-Islam'\n\n4. Reasons for Orientalist Admiration:\n- Prophet's ﷺ well-documented life\n- His renowned truthfulness and trustworthiness\n- Wisdom and clarity in speech\n- Unwavering principles and determination\n- Approachable and affable nature\n\n5. Scholarly Contributions:\n- Collection and preservation of manuscripts\n- Translation of primary sources\n- Critical studies and analysis\n- Publication of original Arabic texts\n- Development of research methodologies\n\n6. Evolution of Studies:\n- Early focus on biographical details\n- Shift to source authentication\n- Comparative religious studies\n- Archaeological approaches\n- Modern interpretive trends",
       references: [
-        "Edward Said, Orientalism",
+        "Edward Said, Orientalism; Western Conceptions of the Orient",
         "Albert Hourani, Islam in European Thought",
         "Thomas Carlyle, Muhammad: The Hero as Prophet",
-        "Maxime Rodinson, Muhammad"
+        "Saeed bin Ali Al-Maghnawi, Al-Sira Al-Nabawiya Fi Al-Kutub Al-Almaniya",
+        "Jamal ibn Muhammad ibn Muhammad, Nukbah Kabirah min Aqwak Ulama' Al-Gharb",
+        "Hussein Nasr, Al-Maghazi Al-Ula wa Mu'allifuha",
+        "Hassan Bazaynia, Kitabat al-Sira al-Nabawiyyah"
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
