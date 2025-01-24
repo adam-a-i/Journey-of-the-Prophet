@@ -167,43 +167,6 @@ export const timelineEvents = [
     }
   },
   {
-    id: "early-life-1",
-    title: {
-      en: "Birth of Prophet Muhammad ﷺ",
-      ar: "ولادة النبي محمد ﷺ"
-    },
-    description: {
-      en: "The blessed birth in Mecca.",
-      ar: "الولادة المباركة في مكة."
-    },
-    category: timelineCategories.EARLY_LIFE,
-    year: "570 CE",
-    icon: "👶",
-    details: {
-      summary: "Short summary here...",
-      fullSummary: "Full detailed summary here...",
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-      powerPointUrl: "/path/to/presentation.pptx",
-      quotes: ["Born in the Year of the Elephant"],
-      content:
-        "Prophet Muhammad ﷺ was born in Mecca in the Year of the Elephant, named after a significant historical event.",
-      references: [
-        "Ibn Saad, Al-Tabaqat Al-Kubra, Manuscript edited, referenced and corrected by: Ali Muhammad Omar, (Cairo, Khanji Library, 1st edition, 2001)",
-        "Ibn Kathir, Al-Sirah Al-Nabawiyya, Manuscript edited, referenced and corrected by: Mustafa Abd Al-Wahid, (Beirut, Dar al-Ma'rifa, Edition 1976)",
-        "Al-Halabi, Insan al-Uyun fi Sirat al-Nabi al-Ma'mun, (Beirut, Dar al-Kutub al-Ilmiyya, 2nd edition, 2006)",
-        "Ibn Hisham, Al-Sira al-Nabawiyyah, Manuscript edited, referenced and corrected by: Omar Abd al-Salam Tadmuri, (Beirut, Dar al-Kitab al-Arabi, 3rd edition, 1990)"
-      ],
-      quiz: [
-        {
-          question: "In which year was Prophet Muhammad ﷺ born?",
-          options: ["569 CE", "570 CE", "571 CE", "572 CE"],
-          correct: 1
-        }
-        // Add more quiz questions...
-      ]
-    },
-  },
-  {
     id: "early-life-2",
     title: "The Life of Muhammad ﷺ As a Human: Birth and Hometown",
     category: timelineCategories.EARLY_LIFE,
@@ -269,20 +232,6 @@ export const timelineEvents = [
     }
   },
   {
-    id: "prophethood-1",
-    title: "First Revelation",
-    category: timelineCategories.PROPHETHOOD,
-    year: "610 CE",
-    description: "The first divine revelation in Cave Hira.",
-    icon: "📖",
-    details: {
-      quotes: ["Read! In the name of your Lord who created"],
-      content:
-        "The first revelation came to Prophet Muhammad ﷺ in Cave Hira through Angel Jibreel.",
-      references: ["Al-Bukhari, Al-Jami' al-Sahih (Beirut, Dar Tawq al-Naja, 1st edition 2001)"],
-    },
-  },
-  {
     id: "prophethood-2",
     title: "The Life of Muhammad ﷺ As a Prophet: Prophethood and Revelation",
     category: timelineCategories.PROPHETHOOD,
@@ -295,7 +244,25 @@ export const timelineEvents = [
         "By Allah, you join ties of relationship, you speak the truth, you bear people's burden, you help the destitute - Khadijah (RA)",
         "Allah did not give me anyone better than her. She believed in me when people disbelieved - Prophet Muhammad ﷺ"
       ],
-      content: "Key Lessons from the Beginning of Prophethood:\n\n1. Divine Selection: Prophethood is based on Allah's choice, not human effort. Muhammad ﷺ was prepared through periods of contemplation and worship in Cave Hira.\n\n2. Importance of Knowledge: The first revelation began with 'Read,' emphasizing Islam's focus on knowledge and learning.\n\n3. Role of Moral Character: The pre-existing noble character of Muhammad ﷺ was crucial in establishing credibility for his message.\n\n4. Unity of Divine Messages: The similarity between Muhammad's ﷺ experience and previous prophets shows the common source of all divine revelations.\n\n5. Love of Homeland: The Prophet's ﷺ concern about potential exile showed his deep connection to Mecca.\n\n6. Peace as Core Value: Throughout the Meccan period, the response to persecution was patience and peace, not violence.\n\n7. Power of Optimism: Despite severe opposition, the Prophet ﷺ maintained unwavering faith in ultimate success.\n\n8. Support of Khadijah: Her immediate belief and support played a crucial role in the early days of Islam.\n\n9. Gradual Revelation: The wisdom in revealing the Quran over 23 years allowed for practical implementation and timeless guidance.",
+      content: `Key Lessons from the Beginning of Prophethood:
+
+1. Divine Selection: Prophethood is based on Allah's choice, not human effort. Muhammad ﷺ was prepared through periods of contemplation and worship in Cave Hira.
+
+2. Importance of Knowledge: The first revelation began with 'Read,' emphasizing Islam's focus on knowledge and learning.
+
+3. Role of Moral Character: The pre-existing noble character of Muhammad ﷺ was crucial in establishing credibility for his message.
+
+4. Unity of Divine Messages: The similarity between Muhammad's ﷺ experience and previous prophets shows the common source of all divine revelations.
+
+5. Love of Homeland: The Prophet's ﷺ concern about potential exile showed his deep connection to Mecca.
+
+6. Peace as Core Value: Throughout the Meccan period, the response to persecution was patience and peace, not violence.
+
+7. Power of Optimism: Despite severe opposition, the Prophet ﷺ maintained unwavering faith in ultimate success.
+
+8. Support of Khadijah: Her immediate belief and support played a crucial role in the early days of Islam.
+
+9. Gradual Revelation: The wisdom in revealing the Quran over 23 years allowed for practical implementation and timeless guidance.`,
       references: [
         "Al-Bukhari, Al-Jami' al-Sahih (Beirut, Dar Tawq al-Naja, 1st edition 2001)",
         "Al-Suhayli, Al-Rawd Al-Unuf",
@@ -309,23 +276,6 @@ export const timelineEvents = [
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
-  },
-  {
-    id: "migration-1",
-    title: "Hijra to Medina",
-    category: timelineCategories.MIGRATION,
-    year: "622 CE",
-    description: "The migration from Mecca to Medina.",
-    icon: "🐪",
-    details: {
-      quotes: ["Every Prophet has a migration, and my migration is to Medina"],
-      content:
-        "The Prophet's migration to Medina marked a turning point in Islamic history.",
-      references: [
-        "Ibn Hisham, Al-Sira al-Nabawiyyah, Manuscript edited, referenced and corrected by: Omar Abd al-Salam Tadmuri, (Beirut, Dar al-Kitab al-Arabi, 3rd edition, 1990)",
-        "Al-Tabari, Tarikh Al-Rusul wa Al-Muluk, Manuscript edited, referenced and corrected by: Muhammad Abu al-Fadl Ibrahim, (Cairo, Dar al-Ma'arif, 1967)"
-      ],
-    },
   },
   {
     id: "migration-2",
@@ -377,20 +327,6 @@ export const timelineEvents = [
     }
   },
   {
-    id: "medina-1",
-    title: "Constitution of Medina",
-    category: timelineCategories.MEDINA,
-    year: "622 CE",
-    description: "Establishment of the first Islamic state.",
-    icon: "📜",
-    details: {
-      quotes: ["The first written constitution in human history"],
-      content:
-        "The Constitution of Medina established rights and responsibilities for all citizens.",
-      references: ["Original text of the Constitution", "Historical analyses"],
-    },
-  },
-  {
     id: "medina-2",
     title: "The Constitution of Medina and the Foundations of Coexistence",
     category: timelineCategories.MEDINA,
@@ -426,7 +362,48 @@ export const timelineEvents = [
         "If what I have heard about him is true, he is very close to take the place I am sitting in - Heraclius",
         "By Allah, if it weren't for modesty on that day, that my companions would witness me lying, I would have lied - Abu Sufyan"
       ],
-      content: "After the Treaty of Hudaybiyyah, the Prophet ﷺ initiated diplomatic correspondence with world leaders:\n\n1. Diplomatic Approach:\n- Respected existing authority structures\n- Used formal titles and proper etiquette\n- Had special seal made for official correspondence\n- Selected skilled envoys for each mission\n\n2. Key Recipients:\n- Heraclius (Byzantine Emperor)\n- Al-Muqawqis (Ruler of Egypt)\n- Negus (King of Abyssinia)\n- Khosroes (Persian Emperor)\n- Various Arab rulers\n\n3. Message Content:\n- Began with greetings of peace\n- Invited to Islam with wisdom and respect\n- Emphasized shared values and beliefs\n- Maintained diplomatic courtesy\n\nKey Lessons:\n\n1. Respect for Authority:\n- Recognized existing leadership\n- Maintained diplomatic protocol\n- Honored local customs and titles\n\n2. Peaceful Approach:\n- Emphasized dialogue over conflict\n- Sought peaceful coexistence\n- Respected religious differences\n\n3. Universal Message:\n- Islam's compatibility with other faiths\n- Emphasis on shared moral values\n- Recognition of common human heritage\n\n4. Ethical Foundation:\n- Importance of truthfulness\n- Value of modesty and respect\n- Priority of moral character",
+      content: `After the Treaty of Hudaybiyyah, the Prophet ﷺ initiated diplomatic correspondence with world leaders:
+
+1. Diplomatic Approach:
+   - Respected existing authority structures
+   - Used formal titles and proper etiquette
+   - Had special seal made for official correspondence
+   - Selected skilled envoys for each mission
+
+2. Key Recipients:
+   - Heraclius (Byzantine Emperor)
+   - Al-Muqawqis (Ruler of Egypt)
+   - Negus (King of Abyssinia)
+   - Khosroes (Persian Emperor)
+   - Various Arab rulers
+
+3. Message Content:
+   - Began with greetings of peace
+   - Invited to Islam with wisdom and respect
+   - Emphasized shared values and beliefs
+   - Maintained diplomatic courtesy
+
+Key Lessons:
+
+1. Respect for Authority:
+   - Recognized existing leadership
+   - Maintained diplomatic protocol
+   - Honored local customs and titles
+
+2. Peaceful Approach:
+   - Emphasized dialogue over conflict
+   - Sought peaceful coexistence
+   - Respected religious differences
+
+3. Universal Message:
+   - Islam's compatibility with other faiths
+   - Emphasis on shared moral values
+   - Recognition of common human heritage
+
+4. Ethical Foundation:
+   - Importance of truthfulness
+   - Value of modesty and respect
+   - Priority of moral character`,
       references: [
         "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin, Manuscript edited, referenced and corrected by: Abd al-Qadir al-Arna'out, (Beirut, Al-Risala Foundation, 1987)",
         "Ibn Haddida, Al-Misbah Al-Mudi' fi Kitab Al-Nabi Al-Ummi wa Rusulihi ila Muluki Al-Ardh min Arabi wa Ajam, Manuscript edited, referenced and corrected by: Muhammad Azim al-Deen, (Beirut, Dar Al-Kutub, 1985)",
@@ -450,7 +427,27 @@ export const timelineEvents = [
         "If you order us to plunge our horses into the sea, we would do so - Sa'd ibn Ubadah",
         "This is the Day of Discrimination when the two armies met - Quran [8:41]"
       ],
-      content: "The Battle of Badr was a pivotal defensive engagement:\n\n1. Causes:\n- Muslims sought to reclaim property seized by Quraysh\n- Abu Sufyan's trade caravan funded by emigrants' seized wealth\n- Quraysh's military response despite caravan's escape\n\n2. Preparation:\n- Prophet ﷺ consulted companions before engagement\n- 313 Muslims vs. approximately 1000 Meccans\n- Limited resources: few horses and 70 camels\n\n3. The Battle:\n- Occurred on 17th Ramadan, 2 AH\n- Divine support through rain and tranquility\n- Muslims achieved decisive victory\n\n4. Aftermath:\n- Captives treated with dignity\n- Some freed through ransom\n- Others freed by teaching literacy\n- Established Muslims as a significant force\n\nKey Lessons:\n- Importance of consultation in leadership\n- Value of justice and defense of rights\n- Emphasis on education and knowledge\n- Demonstration of merciful treatment of captives",
+      content: `The Battle of Badr was a pivotal moment:
+
+1. Strategic Importance:
+   - First major battle in Islamic history
+   - Established Muslim presence in region
+   - Demonstrated military capability
+
+2. Divine Support:
+   - Revelation of verses about the battle
+   - Reports of angelic assistance
+   - Boost to Muslim morale
+
+3. Military Strategy:
+   - Selection of strategic position
+   - Innovative battle formations
+   - Effective use of limited resources
+
+4. Leadership Lessons:
+   - Consultation with companions
+   - Personal participation in battle
+   - Fair distribution of spoils`,
       references: [
         "Al-Suhayli, Al-Rawd Al-Unuf, Manuscript edited, referenced and corrected by: Taha Abd Al-Ra'uf Sa'ad, (Cairo, Al-Azhar Colleges Library, 1972)",
         "Ibn Abd al-Barr, Al-Durar fi Ikhtisar Al-Maghazi wa Al-Siyar, Manuscript edited, referenced and corrected by: Shawqi Dhaif, (Cairo, Dar al-Ma'arif, 2nd edition, 1983)",
@@ -484,26 +481,6 @@ export const timelineEvents = [
       ],
       videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
     }
-  },
-  {
-    id: "legacy-1",
-    title: "Farewell Pilgrimage",
-    category: timelineCategories.LEGACY,
-    year: "632 CE",
-    description: "The Prophet's final pilgrimage and sermon.",
-    icon: "🕋",
-    details: {
-      quotes: ["I leave behind me two things: the Quran and my Sunnah"],
-      content:
-        "The Farewell Pilgrimage contained the Prophet's final major public address.",
-      references: [
-        "Ibn Hisham, Al-Sira al-Nabawiyyah, Manuscript edited, referenced and corrected by: Omar Abd al-Salam Tadmuri, (Beirut, Dar al-Kitab al-Arabi, 3rd edition, 1990)",
-        "Al-Nuwayri, Nihayat al-Arab fi Funun al-Adab, Manuscript edited, referenced and corrected by: Dr. Yusuf Al-Tawil and Ali Muhammad Hashim, (Beirut, Dar Al-Kutub Al-Ilmiyya, 1st edition 2004)",
-        "Ibn Saad, Al-Tabaqat Al-Kubra, Manuscript edited, referenced and corrected by: Ali Muhammad Omar, (Cairo, Khanji Library, 1st edition, 2001)",
-        "Khalifa ibn Khayyat, Tarikh Khalifa ibn Khayyat, (Riyadh, Dar Tayyiba, 2nd edition, 1985)",
-        "Al-Qadi Iyad, Al-Shifa bi Ta'rif Huquq al-Mustafa, Manuscript edited, referenced and corrected by: Abduh Ali Kawshak, Dubai International Holy Quran Award, 1st Edition, 2013"
-      ],
-    },
   },
   {
     id: "medina-4",
@@ -566,7 +543,48 @@ export const timelineEvents = [
         "Muhammad deserves respect, and his speech is worthy of following - Karl Heinrich Becker",
         "No one today would claim that Muhammad forged a religion if they knew Muhammad and studied his biography - Dyson"
       ],
-      content: "Western scholarly engagement with Islamic studies evolved over centuries:\n\n1. Orientalism Definition and Beginnings:\n- Term emerged in 10th century CE\n- Officially established in 1312 CE\n- Focus on studying Eastern civilizations\n- University programs established at Paris, Oxford, Bologna\n\n2. Orientalism Conferences:\n- Late 19th century organization\n- Government support for research\n- International scholarly meetings\n- Publication of research collections\n- Development of research methodologies\n\n3. Prophet's ﷺ Biography in Orientalist Works:\n- Karl Heinrich Becker's defense of Prophet ﷺ\n- Washington Irving's 1849 biography\n- William Muir's 'Life of Muhammad'\n- Thomas Carlyle's 'Muhammad: The Hero as Prophet'\n- Leone Caetani's 'Huliyat al-Islam'\n\n4. Reasons for Orientalist Admiration:\n- Prophet's ﷺ well-documented life\n- His renowned truthfulness and trustworthiness\n- Wisdom and clarity in speech\n- Unwavering principles and determination\n- Approachable and affable nature\n\n5. Scholarly Contributions:\n- Collection and preservation of manuscripts\n- Translation of primary sources\n- Critical studies and analysis\n- Publication of original Arabic texts\n- Development of research methodologies\n\n6. Evolution of Studies:\n- Early focus on biographical details\n- Shift to source authentication\n- Comparative religious studies\n- Archaeological approaches\n- Modern interpretive trends",
+      content: `Western scholarly engagement with Islamic studies evolved over centuries:
+
+1. Orientalism Definition and Beginnings:
+   - Term emerged in 10th century CE
+   - Officially established in 1312 CE
+   - Focus on studying Eastern civilizations
+   - University programs established at Paris, Oxford, Bologna
+
+2. Orientalism Conferences:
+   - Late 19th century organization
+   - Government support for research
+   - International scholarly meetings
+   - Publication of research collections
+   - Development of research methodologies
+
+3. Prophet's ﷺ Biography in Orientalist Works:
+   - Karl Heinrich Becker's defense of Prophet ﷺ
+   - Washington Irving's 1849 biography
+   - William Muir's 'Life of Muhammad'
+   - Thomas Carlyle's 'Muhammad: The Hero as Prophet'
+   - Leone Caetani's 'Huliyat al-Islam'
+
+4. Reasons for Orientalist Admiration:
+   - Prophet's ﷺ well-documented life
+   - His renowned truthfulness and trustworthiness
+   - Wisdom and clarity in speech
+   - Unwavering principles and determination
+   - Approachable and affable nature
+
+5. Scholarly Contributions:
+   - Collection and preservation of manuscripts
+   - Translation of primary sources
+   - Critical studies and analysis
+   - Publication of original Arabic texts
+   - Development of research methodologies
+
+6. Evolution of Studies:
+   - Early focus on biographical details
+   - Shift to source authentication
+   - Comparative religious studies
+   - Archaeological approaches
+   - Modern interpretive trends`,
       references: [
         "Edward Said, Orientalism; Western Conceptions of the Orient, translated by: Muhammad Anani, (Cairo, Dar Ruya for Publishing and Distribution, 2006)",
         "Albert Hourani, Islam in European Thought, (Beirut, Dar Al-Ahlia for Publishing, 1994)",

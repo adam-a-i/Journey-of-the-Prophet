@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const TimelineExpandedCard = ({ event, onClose }) => {
+const TimelineExpandedCard = ({ event, onClose, onNext, onPrevious }) => {
   return (
     <motion.div
       className="modal-overlay"
@@ -17,6 +17,27 @@ const TimelineExpandedCard = ({ event, onClose }) => {
         transition={{ duration: 0.3 }}
         onClick={(e) => e.stopPropagation()}
       >
+        <div className="modal-navigation">
+          <button 
+            className="nav-button prev-button" 
+            onClick={(e) => {
+              e.stopPropagation();
+              onPrevious();
+            }}
+          >
+            ←
+          </button>
+          <button 
+            className="nav-button next-button" 
+            onClick={(e) => {
+              e.stopPropagation();
+              onNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+        
         <button className="close-button" onClick={onClose}>×</button>
         
         <div className="modal-sections">

@@ -3,6 +3,7 @@ import "./App.css";
 import Timeline from "./components/Timeline/Timeline";
 import { AnimatePresence } from "framer-motion";
 import TimelineExpandedCard from "./components/Timeline/TimelineExpandedCard.jsx";
+import { timelineEvents } from "./data/timelineEvents";
 
 function App() {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -10,6 +11,20 @@ function App() {
   const handleEventSelect = (event) => {
     console.log('Setting selected event:', event);
     setSelectedEvent(event);
+  };
+
+  const handlePrevious = () => {
+    const currentIndex = timelineEvents.findIndex(e => e.id === selectedEvent.id);
+    if (currentIndex > 0) {
+      setSelectedEvent(timelineEvents[currentIndex - 1]);
+    }
+  };
+
+  const handleNext = () => {
+    const currentIndex = timelineEvents.findIndex(e => e.id === selectedEvent.id);
+    if (currentIndex < timelineEvents.length - 1) {
+      setSelectedEvent(timelineEvents[currentIndex + 1]);
+    }
   };
 
   return (
@@ -28,7 +43,9 @@ function App() {
         {selectedEvent && (
           <TimelineExpandedCard 
             event={selectedEvent} 
-            onClose={() => setSelectedEvent(null)} 
+            onClose={() => setSelectedEvent(null)}
+            onNext={handleNext}
+            onPrevious={handlePrevious}
           />
         )}
       </AnimatePresence>
