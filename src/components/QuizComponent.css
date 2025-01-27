@@ -215,9 +215,9 @@
   color: #f44336;
 }
 
-/* Fix the card UI */
+/* Update modal content styling */
 .modal-content {
-  background: var(--sand-light);
+  background: white;
   padding: 2rem;
   border-radius: 15px;
   position: relative;
@@ -225,21 +225,85 @@
   max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(139, 69, 19, 0.1);
 }
 
-.modal-navigation {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
-  display: flex;
-  justify-content: space-between;
-  z-index: 2;
+.modal-sections {
+  background: var(--sand-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
 }
 
-.nav-button {
+.modal-header {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.05);
+}
+
+.content-section, 
+.resources-section, 
+.video-section, 
+.quotes-section, 
+.references-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.05);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.resource-btn {
   background: var(--sand-light);
   border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.resource-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.1);
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.btn-text strong {
+  font-size: 1.1rem;
+  color: var(--sand-dark);
+}
+
+.btn-text small {
+  font-size: 0.9rem;
+  color: var(--sand-medium);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+/* Update navigation buttons */
+.nav-button {
+  background: white;
+  border: 2px solid var(--sand-medium);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -250,9 +314,35 @@
   color: var(--sand-dark);
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
 }
 
 .nav-button:hover {
-  background: var(--sand-medium);
+  background: var(--sand-light);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  border: 2px solid var(--sand-medium);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--sand-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+.close-button:hover {
+  background: var(--sand-light);
   transform: scale(1.1);
 } 

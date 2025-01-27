@@ -6,6 +6,7 @@ const TimelineExpandedCard = ({ event, onClose, onNext, onPrevious }) => {
 
   const handleNavigation = (e, direction) => {
     e.stopPropagation();
+    console.log('Navigation clicked:', direction);
     if (direction === 'next') {
       onNext();
     } else {
@@ -31,20 +32,34 @@ const TimelineExpandedCard = ({ event, onClose, onNext, onPrevious }) => {
       >
         <div className="modal-navigation">
           <button 
-            className="nav-button prev-button" 
-            onClick={(e) => handleNavigation(e, 'prev')}
+            className="nav-button" 
+            onClick={(e) => {
+              e.stopPropagation();
+              onPrevious();
+            }}
           >
             ←
           </button>
           <button 
-            className="nav-button next-button" 
-            onClick={(e) => handleNavigation(e, 'next')}
+            className="nav-button" 
+            onClick={(e) => {
+              e.stopPropagation();
+              onNext();
+            }}
           >
             →
           </button>
         </div>
         
-        <button className="close-button" onClick={onClose}>×</button>
+        <button 
+          className="close-button" 
+          onClick={(e) => {
+            e.stopPropagation();
+            onClose();
+          }}
+        >
+          ×
+        </button>
         
         <div className="modal-sections">
           <section className="modal-header">

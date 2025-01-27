@@ -4,6 +4,7 @@ import Timeline from './components/Timeline/Timeline';
 import QuizPage from './components/QuizPage';
 import TimelineExpandedCard from './components/Timeline/TimelineExpandedCard';
 import { AnimatePresence } from 'framer-motion';
+import { timelineEvents } from './data/timelineEvents';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 
   const handlePrevious = () => {
     const currentIndex = timelineEvents.findIndex(e => e.id === selectedEvent.id);
+    console.log('Previous clicked, current index:', currentIndex);
     if (currentIndex > 0) {
       setSelectedEvent(timelineEvents[currentIndex - 1]);
     }
@@ -22,6 +24,7 @@ function App() {
 
   const handleNext = () => {
     const currentIndex = timelineEvents.findIndex(e => e.id === selectedEvent.id);
+    console.log('Next clicked, current index:', currentIndex);
     if (currentIndex < timelineEvents.length - 1) {
       setSelectedEvent(timelineEvents[currentIndex + 1]);
     }

@@ -64,6 +64,7 @@ const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
   const nextQuestion = () => {
     setSelectedAnswer(null);
     setShowExplanation(false);
+    setCurrentAnswer(null);
     if (currentQuestion < quiz.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
