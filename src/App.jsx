@@ -1,15 +1,15 @@
-import { useState } from "react";
-import "./App.css";
-import Timeline from "./components/Timeline/Timeline";
-import { AnimatePresence } from "framer-motion";
-import TimelineExpandedCard from "./components/Timeline/TimelineExpandedCard.jsx";
-import { timelineEvents } from "./data/timelineEvents";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Timeline from './components/Timeline/Timeline';
+import QuizPage from './components/QuizPage';
+import TimelineExpandedCard from './components/Timeline/TimelineExpandedCard';
+import { AnimatePresence } from 'framer-motion';
+import './App.css';
 
 function App() {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const handleEventSelect = (event) => {
-    console.log('Setting selected event:', event);
     setSelectedEvent(event);
   };
 
@@ -28,28 +28,35 @@ function App() {
   };
 
   return (
-    <div className="root-container">
-      <div className="app-container">
-        <header className="main-header">
-          <h1>The Prophet's Seerah</h1>
-          <p className="subtitle">
-            Journey Through the Life of Prophet Muhammad ﷺ
-          </p>
-        </header>
-        <Timeline onEventSelect={handleEventSelect} selectedEvent={selectedEvent} />
-      </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div className="root-container">
+            <div className="app-container">
+              <header className="main-header">
+                <h1>The Prophet's Seerah</h1>
+                <p className="subtitle">
+                  Journey Through the Life of Prophet Muhammad ﷺ
+                </p>
+              </header>
+              <Timeline onEventSelect={handleEventSelect} selectedEvent={selectedEvent} />
+            </div>
 
-      <AnimatePresence>
-        {selectedEvent && (
-          <TimelineExpandedCard 
-            event={selectedEvent} 
-            onClose={() => setSelectedEvent(null)}
-            onNext={handleNext}
-            onPrevious={handlePrevious}
-          />
-        )}
-      </AnimatePresence>
-    </div>
+            <AnimatePresence>
+              {selectedEvent && (
+                <TimelineExpandedCard 
+                  event={selectedEvent} 
+                  onClose={() => setSelectedEvent(null)}
+                  onNext={handleNext}
+                  onPrevious={handlePrevious}
+                />
+              )}
+            </AnimatePresence>
+          </div>
+        } />
+        <Route path="/quiz" element={<QuizPage />} />
+      </Routes>
+    </Router>
   );
 }
 

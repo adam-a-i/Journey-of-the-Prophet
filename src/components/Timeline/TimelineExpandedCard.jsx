@@ -1,6 +1,18 @@
 import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 
 const TimelineExpandedCard = ({ event, onClose, onNext, onPrevious }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (e, direction) => {
+    e.stopPropagation();
+    if (direction === 'next') {
+      onNext();
+    } else {
+      onPrevious();
+    }
+  };
+
   return (
     <motion.div
       className="modal-overlay"
@@ -20,19 +32,13 @@ const TimelineExpandedCard = ({ event, onClose, onNext, onPrevious }) => {
         <div className="modal-navigation">
           <button 
             className="nav-button prev-button" 
-            onClick={(e) => {
-              e.stopPropagation();
-              onPrevious();
-            }}
+            onClick={(e) => handleNavigation(e, 'prev')}
           >
             ←
           </button>
           <button 
             className="nav-button next-button" 
-            onClick={(e) => {
-              e.stopPropagation();
-              onNext();
-            }}
+            onClick={(e) => handleNavigation(e, 'next')}
           >
             →
           </button>
@@ -64,7 +70,16 @@ const TimelineExpandedCard = ({ event, onClose, onNext, onPrevious }) => {
                 </span>
               </button>
 
-              <button className="resource-btn quiz-btn">
+              <button 
+                onClick={() => navigate('/quiz', { 
+                  state: { 
+                    content: event.details.content,
+                    title: event.title,
+                    year: event.year 
+                  }
+                })} 
+                className="resource-btn quiz-btn"
+              >
                 <span className="icon">✍️</span>
                 <span className="btn-text">
                   <strong>Take the Quiz</strong>
@@ -114,4 +129,4 @@ const TimelineExpandedCard = ({ event, onClose, onNext, onPrevious }) => {
   );
 };
 
-export default TimelineExpandedCard; 
+export default TimelineExpandedCard;
