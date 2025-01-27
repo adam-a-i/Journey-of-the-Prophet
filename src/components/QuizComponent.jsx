@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './QuizComponent.css';
 
 const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
@@ -6,11 +6,15 @@ const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [showResults, setShowResults] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [currentAnswer, setCurrentAnswer] = useState(null);
+
+  useEffect(() => {
+    fetchQuiz();
+  }, []);
 
   const fetchQuiz = async () => {
     setLoading(true);
@@ -62,9 +66,20 @@ const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
   };
 
   const nextQuestion = () => {
+    const currentQ = quiz[currentQuestion];
+    setUserAnswers([...userAnswers, {
+      question: currentQ.question,
+      userAnswer: currentAnswer.selected,
+      correctAnswer: currentQ.correct_answer,
+      isCorrect: currentAnswer.isCorrect,
+      explanation: currentQ.explanation,
+      options: currentQ.options
+    }]);
+
     setSelectedAnswer(null);
     setShowExplanation(false);
     setCurrentAnswer(null);
+    
     if (currentQuestion < quiz.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
@@ -73,44 +88,110 @@ const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
   };
 
   if (loading) {
-    return <div className="quiz-loading">Loading quiz...</div>;
+    return (
+      <div className="quiz-container">
+        <div className="loading-state">
+          <div className="loader"></div>
+          <p>Generating your quiz...</p>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="quiz-error">{error}</div>;
+    return (
+      <div className="quiz-container">
+        <div className="error-state">
+          <p>{error}</p>
+          <button onClick={fetchQuiz}>Try Again</button>
+        </div>
+      </div>
+    );
   }
 
   if (!quiz) {
     return (
-      <button onClick={fetchQuiz} className="resource-btn quiz-btn">
-        <span className="icon">✍️</span>
-        <span className="btn-text">
-          <strong>Take the Quiz</strong>
-          <small>Test your knowledge</small>
-        </span>
-      </button>
+      <div className="quiz-container">
+        <div className="loading-state">
+          <div className="loader"></div>
+          <p>Preparing questions...</p>
+        </div>
+      </div>
     );
   }
 
   if (showResults) {
+    const correctAnswers = userAnswers.filter(a => a.isCorrect).length;
+    const totalQuestions = quiz.length;
+    const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+
     return (
-      <div className="quiz-results">
+      <div className="quiz-container quiz-results">
         <h2>Quiz Results</h2>
         <div className="score">
-          Score: {userAnswers.filter(a => a.isCorrect).length}/{quiz.length}
-        </div>
-        {userAnswers.map((answer, index) => (
-          <div key={index} className="result-item">
-            <p className="question">{answer.question.question}</p>
-            <p className={`answer ${answer.isCorrect ? 'correct' : 'incorrect'}`}>
-              Your answer: {answer.userAnswer}
-            </p>
-            <p className="correct-answer">
-              Correct answer: {answer.question.correct_answer}
-            </p>
-            <p className="explanation">{answer.question.explanation}</p>
+          <div className="score-text">
+            Score: {correctAnswers}/{totalQuestions} ({percentage}%)
           </div>
-        ))}
+        </div>
+
+        <div className="results-list">
+          {userAnswers.map((answer, index) => (
+            <div key={index} className="result-item">
+              <h3>Question {index + 1}</h3>
+              <p className="question-text">{answer.question}</p>
+              
+              <div className="answers-grid">
+                {answer.options.map((option, optIndex) => (
+                  <div 
+                    key={optIndex} 
+                    className={`answer-option ${
+                      option === answer.userAnswer 
+                        ? answer.isCorrect 
+                          ? 'correct' 
+                          : 'incorrect'
+                        : option === answer.correctAnswer
+                          ? 'correct'
+                          : ''
+                    }`}
+                  >
+                    {option}
+                  </div>
+                ))}
+              </div>
+
+              <div className="answer-details">
+                <p className="your-answer">
+                  Your answer: <span className={answer.isCorrect ? 'correct' : 'incorrect'}>
+                    {answer.userAnswer}
+                  </span>
+                </p>
+                {!answer.isCorrect && (
+                  <p className="correct-answer">
+                    Correct answer: <span className="correct">{answer.correctAnswer}</span>
+                  </p>
+                )}
+                <div className="explanation">
+                  <strong>Explanation:</strong> {answer.explanation}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="quiz-results-buttons">
+          <button 
+            className="back-button"
+            onClick={() => window.location.href = '/'}
+          >
+            Back to Timeline
+          </button>
+          <button 
+            className="retry-button"
+            onClick={() => window.location.reload()}
+          >
+            Try Another Quiz
+          </button>
+        </div>
       </div>
     );
   }
