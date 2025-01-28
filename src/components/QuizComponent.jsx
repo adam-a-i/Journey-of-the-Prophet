@@ -22,11 +22,16 @@ const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
     setError(null);
     try {
       console.log('Fetching quiz with params:', { inputText, difficulty, numberOfQs });
-      const response = await fetch(`${API_URL}/generate-quiz`, {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ inputText, difficulty, numberOfQs }),
       });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const data = await response.json();
       console.log('Quiz data received:', data);
       if (data.quiz && data.quiz.quiz) {
