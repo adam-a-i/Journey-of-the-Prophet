@@ -1,11 +1,7 @@
 import { groq } from 'groq-sdk';
 
 export default async function handler(req, res) {
-  console.log('API request received:', {
-    method: req.method,
-    headers: req.headers,
-    body: req.body
-  });
+  console.log('API request received');
 
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -18,51 +14,52 @@ export default async function handler(req, res) {
     return;
   }
 
+  if (!process.env.VITE_GROQ_API_KEY) {
+    console.error('GROQ API key is missing');
+    return res.status(500).json({ 
+      error: 'Server configuration error',
+      details: 'API key is missing'
+    });
+  }
+
   if (req.method !== 'POST') {
-    console.log('Method not allowed:', req.method);
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { inputText, difficulty, numberOfQs } = req.body;
   
+  if (!inputText || !difficulty || !numberOfQs) {
+    return res.status(400).json({ 
+      error: 'Missing required parameters',
+      required: ['inputText', 'difficulty', 'numberOfQs'],
+      received: { inputText: !!inputText, difficulty: !!difficulty, numberOfQs: !!numberOfQs }
+    });
+  }
+
   try {
-    console.log('Creating GROQ client with API key:', process.env.VITE_GROQ_API_KEY ? 'exists' : 'missing');
-    
     const groqClient = new groq({ 
       apiKey: process.env.VITE_GROQ_API_KEY 
     });
 
-    console.log('Sending request to GROQ API...');
     const chatCompletion = await groqClient.chat.completions.create({
       messages: [
         {
           role: 'system',
           content: `You are a JSON-only API endpoint. You must output syntactically valid JSON matching this schema:
 {
-  "type": "object",
-  "required": ["quiz"],
-  "properties": {
-    "quiz": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["question", "options", "correct_answer", "explanation"],
-        "properties": {
-          "question": { "type": "string" },
-          "options": { "type": "array", "items": { "type": "string" }, "minItems": 4, "maxItems": 4 },
-          "correct_answer": { "type": "string" },
-          "explanation": { "type": "string" }
-        }
-      },
-      "minItems": ${numberOfQs},
-      "maxItems": ${numberOfQs}
+  "quiz": [
+    {
+      "question": "string",
+      "options": ["string", "string", "string", "string"],
+      "correct_answer": "string",
+      "explanation": "string"
     }
-  }
+  ]
 }`
         },
         {
           role: 'user',
-          content: `INPUT_TEXT=${inputText}\nDIFFICULTY=${difficulty}\nOUTPUT_FORMAT=JSON\nNUM_QUESTIONS=${numberOfQs}`
+          content: `INPUT_TEXT=${inputText}\nDIFFICULTY=${difficulty}\nNUM_QUESTIONS=${numberOfQs}`
         }
       ],
       model: 'llama3-70b-8192',
@@ -71,32 +68,35 @@ export default async function handler(req, res) {
       top_p: 1,
     });
 
-    console.log('GROQ API response received');
     const messageContent = chatCompletion?.choices?.[0]?.message?.content;
 
-    if (messageContent) {
-      console.log('Raw message content:', messageContent);
+    if (!messageContent) {
+      console.error('No message content received from GROQ');
+      return res.status(500).json({ error: 'Failed to generate quiz content' });
+    }
+
+    try {
       const cleanedContent = messageContent.trim().replace(/^[^{]*/, '').replace(/[^}]*$/, '');
-      console.log('Cleaned content:', cleanedContent);
-      
       const parsedQuiz = JSON.parse(cleanedContent);
-      console.log('Parsed quiz:', parsedQuiz);
       
       if (!parsedQuiz.quiz || !Array.isArray(parsedQuiz.quiz)) {
         throw new Error('Invalid quiz structure');
       }
 
       return res.status(200).json({ quiz: parsedQuiz });
-    } else {
-      console.log('No message content found');
-      return res.status(500).json({ error: 'No valid message content found in the response.' });
+    } catch (parseError) {
+      console.error('Failed to parse GROQ response:', parseError);
+      return res.status(500).json({ 
+        error: 'Failed to parse quiz content',
+        details: parseError.message,
+        rawContent: messageContent
+      });
     }
   } catch (error) {
     console.error('Quiz Generation Error:', error);
     return res.status(500).json({ 
-      error: 'Failed to generate quiz.',
-      details: error.message,
-      stack: error.stack
+      error: 'Failed to generate quiz',
+      details: error.message
     });
   }
 } 
