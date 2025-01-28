@@ -19,8 +19,8 @@ export default async function handler(req, res) {
   }
 
   // Check API key
-  console.log('Checking GROQ API key:', process.env.VITE_GROQ_API_KEY ? 'Present' : 'Missing');
-  if (!process.env.VITE_GROQ_API_KEY) {
+  console.log('Checking GROQ API key:', process.env.GROQ_API_KEY ? 'Present' : 'Missing');
+  if (!process.env.GROQ_API_KEY) {
     console.error('GROQ API key is missing');
     return res.status(500).json({ 
       error: 'Server configuration error',
@@ -52,7 +52,7 @@ export default async function handler(req, res) {
   try {
     console.log('Creating GROQ client...');
     const groqClient = new groq({ 
-      apiKey: process.env.VITE_GROQ_API_KEY 
+      apiKey: process.env.GROQ_API_KEY 
     });
 
     console.log('Sending request to GROQ API...');
