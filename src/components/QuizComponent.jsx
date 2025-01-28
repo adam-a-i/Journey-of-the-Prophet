@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './QuizComponent.css';
+import { API_URL } from '../config';
 
 const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
   const [quiz, setQuiz] = useState(null);
@@ -21,7 +22,7 @@ const QuizComponent = ({ inputText, difficulty, numberOfQs }) => {
     setError(null);
     try {
       console.log('Fetching quiz with params:', { inputText, difficulty, numberOfQs });
-      const response = await fetch('http://localhost:3000/generate-quiz', {
+      const response = await fetch(`${API_URL}/generate-quiz`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ inputText, difficulty, numberOfQs }),
