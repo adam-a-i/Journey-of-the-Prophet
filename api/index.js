@@ -1,9 +1,18 @@
 import { groq } from 'groq-sdk';
 
 export default async function handler(req, res) {
-  // Add CORS headers
+  // Add CORS headers - allow both production and preview URLs
+  const allowedOrigins = [
+    'https://journeyoftheprophet.vercel.app',
+    'https://journeyoftheprophet-a5eva8qky-admas-projects-46edb5cc.vercel.app'
+  ];
+  
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+
   res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', 'https://journeyoftheprophet.vercel.app');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
   res.setHeader(
     'Access-Control-Allow-Headers',
