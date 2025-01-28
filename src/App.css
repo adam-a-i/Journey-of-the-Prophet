@@ -153,3 +153,30 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #654321 #f1f1f1;
 }
+
+/* Add styles for the click indicator */
+.timeline-event {
+  position: relative;  /* Ensure relative positioning for absolute children */
+}
+
+/* Add hover effect to make it more interactive */
+.timeline-event:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-content {
+  position: relative;
+}
+
+.event-content::after {
+  content: "Click to expand ▼";
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  color: #8B6B4F;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
