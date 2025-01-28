@@ -9,10 +9,21 @@ export default async function handler(req, res) {
     console.log('Request Headers:', req.headers);
     console.log('Request Body:', req.body);
 
-    // Set CORS headers
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    // Set CORS headers - allow both domains
+    const allowedOrigins = [
+      'https://journeyoftheprophet.vercel.app',
+      'https://journeyoftheprophet-a5eva8qky-admas-projects-46edb5cc.vercel.app',
+      'http://localhost:3000'
+    ];
+    
+    const origin = req.headers.origin;
+    
+    if (allowedOrigins.includes(origin)) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+      res.setHeader('Access-Control-Allow-Credentials', 'true');
+    }
 
     // Handle preflight requests
     if (req.method === 'OPTIONS') {
