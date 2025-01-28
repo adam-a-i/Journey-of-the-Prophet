@@ -30,7 +30,7 @@ export const timelineEvents = [
         "Al-Jumahi, Tabaqat Fuhul Al-Shu'ara, Manuscript edited, referenced and corrected by: Mahmoud Muhammad Shakir, (Jeddah, Dar Al-Madani)",
         "Jawad Ali, Al-Mufassal fi Tarikh al-Arab Qabl al-Islam, Baghdad university printings, 2nd edition, 1993"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/07OsSSt0ytc"
     },
   },
   {
@@ -51,7 +51,7 @@ export const timelineEvents = [
         "Al-Qalqashandi, Nihayat Al-Arb Fi Ma'rifat Ansab Al-Arab, Manuscript edited, referenced and corrected by: Ali Al-Khaqani, (Baghdad, Al-Najah Printing Press, 1958)",
         "Hisham ibn al-Kalbi, Nasab Ma'ad wa Al-Yemen Al-Kabir, (Beirut, Alam Al-Kutub, 2004)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/4Ah2iQnCdpg"
     },
   },
   {
@@ -71,7 +71,7 @@ export const timelineEvents = [
         "Herodotus, Tarikh Herodotus, translated by: Abd Al-Ilah Al-Mallah, (Abu Dhabi, The Cultural Foundation, 2001)",
         "Yaqut al-Hamawi, Kitab Mu'jam Al-Buldan, (Dar Sader, 1993)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/1dk-KOggtic"
     },
   },
   {
@@ -94,7 +94,7 @@ export const timelineEvents = [
         "Al-Azraqi, Akhbar Makka, Manuscript edited, referenced and corrected by Abd al-Malik bin Abdullah bin Duhaysh, Al-Asadi Library, 1st edition, 2004",
         "Ibn Abd Rabbih, Al-Iqd al-Farid, Manuscript edited, referenced and corrected by: Mufid Muhammad Qumaiha, (Beirut, Dar al-Kutub al-Ilmiyyah, 1st edition, 1983)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/w041e9G8NhQ"
     }
   },
   {
@@ -117,7 +117,7 @@ export const timelineEvents = [
         "Al-Bukhari, Al-Adab Al-Mufrad, Manuscript edited, referenced and corrected by: Muhammad Fuad Abdul Baqi, (Al-Matba'aa Al-Salafiyya, 1955)",
         "Ibn Abd Rabbih, Al-Iqd al-Farid, Manuscript edited, referenced and corrected by: Mufid Muhammad Qumaiha, (Beirut, Dar al-Kutub al-Ilmiyyah, 1st edition, 1983)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/bkVsus8Ehxs"
     }
   },
   {
@@ -140,7 +140,7 @@ export const timelineEvents = [
         "Al-Azraqi, Akhbar Makka, Manuscript edited, referenced and corrected by Abd al-Malik bin Abdullah bin Duhaysh, Al-Asadi Library, 1st edition, 2004",
         "Shaikh Abdullah ibn Bayyah, The New Al-Fudul Alliance: An Opportunity for Global Peace, Forum for Promoting Peace In Muslim Societies, Abu Dhabi 2018"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/7-6uOz2V4dM"
     }
   },
   {
@@ -163,7 +163,7 @@ export const timelineEvents = [
         "Al-Khatib al-Baghdadi, Al-Jami' li Akhlaq al-Rawi wa Adab al-Sami', (Riyadh, Maktabat Al-Maa'rif, 1983)",
         "Al-Tirmidhi, Al Shama'il al-Muhammadiyah, Manuscript edited, referenced and corrected by: Izzat Ubaid Al-Da'as, (Beirut, Dar Al-Hadith, 3rd edition, 1988)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/HZ0i4J9xS_0"
     }
   },
   {
@@ -184,7 +184,7 @@ export const timelineEvents = [
         "Al-Baladhuri, Ansab al-Ashraf, Manuscript edited, referenced and corrected by: Muhammad Baqir al-Mahmoudi, (Egypt, Dar al-Ma'arif, 1959)",
         "Al-Suhayli, Al-Rawd Al-Unuf, Manuscript edited, referenced and corrected by: Taha Abd Al-Ra'uf Sa'ad, (Cairo, Al-Azhar Colleges Library, 1972)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/xhBlWH7R_e8"
     }
   },
   {
@@ -205,7 +205,7 @@ export const timelineEvents = [
         "Ibn Saad, Al-Tabaqat Al-Kubra, Manuscript edited, referenced and corrected by: Ali Muhammad Omar, (Cairo, Khanji Library, 1st edition, 2001)",
         "Al-Salihi, Subul al-Huda wa al-Rashad fi Sirat Khayr Al-Ibad, Manuscript edited, referenced and corrected by: Mustafa Abd al-Wahid, The Supreme Council for Islamic Affairs, Ministry of Religious Endowments, Arab Republic of Egypt, 1997"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/frXH3LH0JcA"
     }
   },
   {
@@ -228,7 +228,7 @@ export const timelineEvents = [
         "Ibn Haddida, Al-Misbah Al-Mudi'",
         "Al-Kala'i, al-Iktifa'a"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/xGvSdgdUDfE"
     }
   },
   {
@@ -274,7 +274,7 @@ export const timelineEvents = [
         "Al-Mawardi, A'lam al-Nubuwwah, (Beirut, Dar Al-Kutub Al-Ilmiyya, 1st edition, 1968)",
         "Ibn Kathir, Al-Bidaya wa al-Nihaya, (Beirut, Maktabat Al-Ma'arif, 1991)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/ozT7vh7AwC4"
     }
   },
   {
@@ -300,7 +300,7 @@ export const timelineEvents = [
         "Al-Tabari, Tarikh Al-Rusul wa Al-Muluk, Manuscript edited, referenced and corrected by: Muhammad Abu al-Fadl Ibrahim, (Cairo, Dar al-Ma'arif, 1967)",
         "Al-Baladhuri, Ansab al-Ashraf, Manuscript edited, referenced and corrected by: Muhammad Baqir al-Mahmoudi, (Egypt, Dar al-Ma'arif, 1959)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/7Sp_7t7y_3Q"
     }
   },
   {
@@ -323,7 +323,7 @@ export const timelineEvents = [
         "Al-Salihi, Subul Al-Huda wa Al-Rashad",
         "Al-Bakri, Mu'jam Ma Ista'jam"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/9XhIeVn3su8"
     }
   },
   {
@@ -346,7 +346,7 @@ export const timelineEvents = [
         "Fakhr al-Din al-Razi, Mafatih al-Ghaib",
         "Ibn Saad, Al-Tabaqat Al-Kubra, Manuscript edited, referenced and corrected by: Ali Muhammad Omar, (Cairo, Khanji Library, 1st edition, 2001)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/ABhM0zHyRFc"
     }
   },
   {
@@ -411,7 +411,7 @@ Key Lessons:
         "Al-Maqrizi, Imta' al-Asma' bi Ma lil-Nabi min al-Ahwal wa al-Amwal wa al-Hafada wa al-Mata', Manuscript edited, referenced and corrected by: Muhammad Abd Al-Hamid al-Namisi, (Beirut, Dar Al-Kutub Al-Ilmiyya, 1st edition, 1999)",
         "Ibn Saad, Al-Tabaqat Al-Kubra, Manuscript edited, referenced and corrected by: Ali Muhammad Omar, (Cairo, Khanji Library, 1st edition, 2001)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/Ooar8laivzw"
     }
   },
   {
@@ -455,7 +455,7 @@ Key Lessons:
         "Al-Zubairi, Nasab Quraysh, Manuscript edited, referenced and corrected by: Lévi Provençal, (Cairo, Dar Al-Ma'arif, 3rd edition)",
         "Ibn Hisham, Al-Sira al-Nabawiyyah, Manuscript edited, referenced and corrected by: Omar Abd al-Salam Tadmuri, (Beirut, Dar al-Kitab al-Arabi, 3rd edition, 1990)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/zGfQ70UOxxg"
     }
   },
   {
@@ -479,7 +479,7 @@ Key Lessons:
         "Ibn Hisham, Al-Sira al-Nabawiyyah, Manuscript edited, referenced and corrected by: Omar Abd al-Salam Tadmuri, (Beirut, Dar al-Kitab al-Arabi, 3rd edition, 1990)",
         "Al-Suhayli, Al-Rawd Al-Unuf, Manuscript edited, referenced and corrected by: Taha Abd Al-Ra'uf Sa'ad, (Cairo, Al-Azhar Colleges Library, 1972)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/GSFzhQG-3Y4"
     }
   },
   {
@@ -503,7 +503,7 @@ Key Lessons:
         "Ibn Hisham, Al-Sira al-Nabawiyyah, Manuscript edited, referenced and corrected by: Omar Abd al-Salam Tadmuri, (Beirut, Dar al-Kitab al-Arabi, 3rd edition, 1990)",
         "Al-Maqrizi, Imta' al-Asma' bi Ma lil-Nabi min al-Ahwal wa al-Amwal wa al-Hafada wa al-Mata', Manuscript edited, referenced and corrected by: Muhammad Abd Al-Hamid al-Namisi, (Beirut, Dar Al-Kutub Al-Ilmiyya, 1st edition, 1999)"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/82x1qmGXYOg"
     }
   },
   {
@@ -527,7 +527,7 @@ Key Lessons:
         "Ibn Haddida, Al-Misbah Al-Mudi'",
         "Al-Kala'i, al-Iktifa'a"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/SWrrDokVM1k"
     }
   },
   {
@@ -592,7 +592,7 @@ Key Lessons:
         "Saeed bin Ali Al-Maghnawi, Al-Sira Al-Nabawiya Fi Al-Kutub Al-Almaniya, (Riyadh, Al-Obaikan for Publishing, 1st edition, 2018)",
         "Hassan Bazaynia, Kitabat al-Sira al-Nabawiyyah Lada al-Arab al-Muhdaithin: Ittijahatuha wa Waza'ifaha, Arab Cultural Center, 1st edition, 2014"
       ],
-      videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+      videoUrl: "https://www.youtube.com/embed/HZ0i4J9xS_0"
     }
   },
 ];
