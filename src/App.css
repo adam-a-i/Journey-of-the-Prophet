@@ -47,7 +47,7 @@ body {
 }
 
 .main-header h1 {
-  color: var(--sand-dark);
+  color: #4A2511; /* Very dark brown for "The Prophet's Seerah" */
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
   font-family: "Noto Serif", serif;
@@ -55,13 +55,13 @@ body {
 }
 
 .subtitle {
-  color: var(--gold-accent);
+  color: #8B6B4F; /* Lighter brown for the subtitle */
   font-size: 1.2rem;
   margin-top: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Add a decorative border inspired by Islamic patterns */
+/* Arabic-styled decorative border */
 .main-header::after {
   content: "";
   position: absolute;
@@ -76,6 +76,39 @@ body {
     var(--gold-accent),
     transparent
   );
+}
+
+/* Add center decoration */
+.main-header::before {
+  content: "";
+  position: absolute;
+  bottom: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234A2511' d='M12 0c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zm10 12c0 1-1 2-2 2s-2-1-2-2 1-2 2-2 2 1 2 2zM0 12c0 1 1 2 2 2s2-1 2-2-1-2-2-2-2 1-2 2zm12 10c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z'/%3E%3C/path%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Add diamond decorations */
+.main-header h1::before,
+.main-header h1::after {
+  content: "◆";
+  position: absolute;
+  bottom: -1.3rem;
+  font-size: 0.8rem;
+  color: #4A2511;
+}
+
+.main-header h1::before {
+  left: calc(50% - 250px);
+}
+
+.main-header h1::after {
+  right: calc(50% - 250px);
 }
 
 /* Language switcher positioning */
