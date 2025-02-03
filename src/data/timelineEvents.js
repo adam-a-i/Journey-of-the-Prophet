@@ -135,10 +135,10 @@ export const timelineEvents = [
       content: "Mecca holds a sacred position in Islamic history, mentioned in the Quran as both 'Makkah' and 'Bakkah'. The city's history traces back to Prophet Ibrahim (AS) and his son Ismail (AS). The custodianship of the Kaaba passed through various tribes: from Jurhum to Khuza'ah, and finally to Quraysh through Qusay ibn Kilab.\n\nThe Kaaba's construction has a noble history, with Prophet Ibrahim (AS) being the first to rebuild it after the flood. Qusay ibn Kilab later renovated it, roofing it with wood and palm leaves. The tradition of the Kaaba's Kiswa (covering) began with King As'ad al-Yamani al-Hamiri.\n\nA significant event in Meccan history was the formation of the Al-Fudul Alliance (Hilf al-Fudul), occurring twenty years before the Prophet's mission. This alliance, which the Prophet ﷺ praised, was formed to protect the rights of the oppressed and ensure justice for all in Mecca, regardless of their origin. The alliance's principles were so noble that the Prophet ﷺ stated he would still respond to it even after Islam.",
       references: [
         "The Holy Quran",
-        "Al-Bayhaqi, Shu'ab al-Iman, Manuscript edited, referenced and corrected by: Muhammad al-Sa'id bin Basyuni Zaghloul (Beirut, Dar al-Kutub al-Ilmiyya, 1st edition, 2000)",
-        "Ibn al-Dhiya Al-Makki, Tarikh Makkah al-Musharrafah wal-Masjid al-Haram wal-Madinah al-Sharifah wal-Qabr al-Sharif, Manuscript edited, referenced and corrected by: Alaa Ibrahim Al-Azhari and Ayman Nasr Al-Azhari, (Beirut, Dar Al-Kutub Al-Ilmiya, 2 edition, 1997)",
-        "Al-Azraqi, Akhbar Makka, Manuscript edited, referenced and corrected by Abd al-Malik bin Abdullah bin Duhaysh, Al-Asadi Library, 1st edition, 2004",
-        "Shaikh Abdullah ibn Bayyah, The New Al-Fudul Alliance: An Opportunity for Global Peace, Forum for Promoting Peace In Muslim Societies, Abu Dhabi 2018"
+        "Ibn Ishaq, Al-Sirah al-Nabawiyyah, Manuscript edited, referenced and corrected by: Ahmed Farid Al-Yazidi, (Beirut, Dar Al-Kutub Al-Ilmiyya, 1st Edition, 2004)",
+        "Ibn al-Athir, Al-Nihayah fi Gharib Al-Hadith wa Al-Athar, Manuscript edited, referenced and corrected by: Ali bin Hassan bin Ali al-Athari, (Dammam, Ibn al-Jawzi Publishing House, 1st Edition, 2001)",
+        "Ibn al-Jawzi, Al-Muntazam fi Tarikh al-Muluk wa-al-Umam, Manuscript edited, referenced and corrected by: Muhammad Abdul Qadir Ata and Mustafa Abdul Qadir Ata, (Beirut, Dar Al-Kutub Al-Ilmiyya, 2nd Edition, 1995)",
+        "Ibn Al-Jawzi, Talqih Fuhum Ahl al-Athar fi Uyun al-Tarikh wa al-Siyar, (Beirut, Dar Al-Arqam Bin Abi Al-Arqam, 1st edition, 1997)"
       ],
       videoUrl: "https://www.youtube.com/embed/7-6uOz2V4dM"
     }
@@ -222,11 +222,12 @@ export const timelineEvents = [
       ],
       content: "The youth of Muhammad ﷺ was marked by significant experiences that prepared him for his future role:\n\n1. Trade Journeys: Traveled with his uncle Abu Talib to Syria, gaining commercial experience\n\n2. Character Development: Became known as 'Al-Amin' (The Trustworthy) for his exceptional honesty\n\n3. Social Leadership: Participated in the Hilf al-Fudul alliance at age 20\n\n4. Marriage to Khadijah: At 25, married Khadijah bint Khuwaylid, a successful businesswoman\n\n5. Arbitration: Resolved the Black Stone dispute at age 35\n\nKey lessons from this period:\n- The importance of good character in earning social trust\n- The value of practical experience in trade and leadership\n- The significance of standing for justice and supporting the oppressed",
       references: [
-        "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin",
-        "Al-Suyuti, Al-Khasa's Al-Kubra",
-        "Ibn Saiyyd Al-Nas, Uyun Al-Athar",
-        "Ibn Haddida, Al-Misbah Al-Mudi'",
-        "Al-Kala'i, al-Iktifa'a"
+        "The Holy Quran",
+        "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin, Manuscript edited, referenced and corrected by: Abd al-Qadir al-Arna'out, (Beirut, Al-Risala Foundation, 1987)",
+        "Jalal Al-Deen Al-Suyuti, Al-Khasa'is al-Kubra, Manuscript edited, referenced and corrected by: Muhammad Khalil Harras, (Cairo, Dar Al-Kutub Al-Hadithah, no date)",
+        "Ibn Sayyid al-Nas, Uyun Al-Athar fi Funun Al-Maghazi wa Al-Shama'il wa Al-Siyar, Manuscript edited, referenced and corrected by: Muhammad Al-Eid Al-Khtraoui, Muhyiddin Masto, (Al-Madinah Al-Munawwarah, Dar al-Turath, no date)",
+        "Ibn Haddida, Al-Misbah Al-Mudi' fi Kitab Al-Nabi Al-Ummi wa Rusulihi ila Muluki Al-Ardh min Arabi wa Ajam, Manuscript edited, referenced and corrected by: Muhammad Azim al-Deen, (Beirut, Dar Al-Kutub, 1985)",
+        "Al-Kala'i, al-Iktifa'a fi maghazi al Mustafa wa Al-Thalatha Al-Khulafa', Manuscript edited, referenced and corrected by: Muhammad Kamal al-Deen Izz al-Deen Ali, (Beirut, Alam al-Kutub, 1st edition, 1997)"
       ],
       videoUrl: "https://www.youtube.com/embed/xGvSdgdUDfE"
     }
@@ -405,11 +406,12 @@ Key Lessons:
    - Value of modesty and respect
    - Priority of moral character`,
       references: [
+        "The Holy Quran",
         "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin, Manuscript edited, referenced and corrected by: Abd al-Qadir al-Arna'out, (Beirut, Al-Risala Foundation, 1987)",
+        "Jalal Al-Deen Al-Suyuti, Al-Khasa'is al-Kubra, Manuscript edited, referenced and corrected by: Muhammad Khalil Harras, (Cairo, Dar Al-Kutub Al-Hadithah, no date)",
+        "Ibn Sayyid al-Nas, Uyun Al-Athar fi Funun Al-Maghazi wa Al-Shama'il wa Al-Siyar, Manuscript edited, referenced and corrected by: Muhammad Al-Eid Al-Khtraoui, Muhyiddin Masto, (Al-Madinah Al-Munawwarah, Dar al-Turath, no date)",
         "Ibn Haddida, Al-Misbah Al-Mudi' fi Kitab Al-Nabi Al-Ummi wa Rusulihi ila Muluki Al-Ardh min Arabi wa Ajam, Manuscript edited, referenced and corrected by: Muhammad Azim al-Deen, (Beirut, Dar Al-Kutub, 1985)",
-        "Al-Kala'i, al-Iktifa'a fi maghazi al Mustafa wa Al-Thalatha Al-Khulafa', Manuscript edited, referenced and corrected by: Muhammad Kamal al-Deen Izz al-Deen Ali, (Beirut, Alam al-Kutub, 1st edition, 1997)",
-        "Al-Maqrizi, Imta' al-Asma' bi Ma lil-Nabi min al-Ahwal wa al-Amwal wa al-Hafada wa al-Mata', Manuscript edited, referenced and corrected by: Muhammad Abd Al-Hamid al-Namisi, (Beirut, Dar Al-Kutub Al-Ilmiyya, 1st edition, 1999)",
-        "Ibn Saad, Al-Tabaqat Al-Kubra, Manuscript edited, referenced and corrected by: Ali Muhammad Omar, (Cairo, Khanji Library, 1st edition, 2001)"
+        "Al-Kala'i, al-Iktifa'a fi maghazi al Mustafa wa Al-Thalatha Al-Khulafa', Manuscript edited, referenced and corrected by: Muhammad Kamal al-Deen Izz al-Deen Ali, (Beirut, Alam al-Kutub, 1st edition, 1997)"
       ],
       videoUrl: "https://www.youtube.com/embed/Ooar8laivzw"
     }
@@ -521,11 +523,11 @@ Key Lessons:
       ],
       content: "The final months of the Prophet's ﷺ life marked significant events:\n\n1. The Farewell Pilgrimage:\n- Performed in 10 AH\n- Over 100,000 Muslims participated\n- Detailed demonstration of Hajj rituals\n- Delivered comprehensive farewell sermon\n\n2. The Farewell Sermon:\n- Emphasized human rights and dignity\n- Prohibited bloodshed and injustice\n- Established equality among people\n- Stressed women's rights\n- Abolished pre-Islamic customs\n- Left Quran and Sunnah as guidance\n\n3. Final Days:\n- Illness began after visiting Baqi cemetery\n- Stayed in Aisha's chamber\n- Abu Bakr led prayers\n- Made final appearance in mosque\n\n4. The Prophet's ﷺ Passing:\n- Monday, 12th Rabi al-Awwal, 11 AH\n- Age 63\n- Buried in Aisha's chamber\n- Community deeply affected\n\nKey Lessons:\n- Importance of clear succession\n- Universal message of Islam\n- Emphasis on human dignity\n- Protection of vulnerable groups\n- Unity of Muslim community\n- Preservation of human rights",
       references: [
-        "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin",
-        "Al-Suyuti, Al-Khasa's Al-Kubra",
-        "Ibn Saiyyd Al-Nas, Uyun Al-Athar",
-        "Ibn Haddida, Al-Misbah Al-Mudi'",
-        "Al-Kala'i, al-Iktifa'a"
+        "Ibn Tulun, I'lam Al-Sa'ilin an Kutub Sayyid Al-Mursalin, Manuscript edited, referenced and corrected by: Abd al-Qadir al- Arna'out, (Beirut, Al-Risala Foundation, 1987).",
+        "Jalal Al-Deen Al-Suyuti, Al-Khasa'is al-Kubra, Manuscript edited, referenced and corrected by: Muhammad Khalil Harras, (Cairo, Dar Al-Kutub Al-Hadithah, no date).",
+        "Ibn Sayyid Al-Nas, Uyun Al-Athar fi Funun Al-Maghazi wa Al-Shama’il wa Al-Siyar, (Al-Madinah Al-Munawwarah, Dar al-Turath, 1/109). ",
+        "Ibn Haddida, Al-Misbah Al-Mudi’ fi Kitab Al-Nabi Al-Ummi  wa Rusulihi ila Muluki Al-Ardh min Arabi wa Ajam, Manuscript  edited, referenced and corrected by: Muhammad Azim al-Deen,  (Beirut, Dar Al-Kutub, 1985).",
+        "Al-Kala'i, al-Iktifa’a fi maghazi al Mustafa wa Al-Thalatha  Al-Khulafa’, Manuscript edited, referenced and corrected by:  Muhammad Kamal al-Deen Izz al-Deen Ali, (Beirut, Alam al-Kutub, 1st edition, in 1997). "
       ],
       videoUrl: "https://www.youtube.com/embed/SWrrDokVM1k"
     }
